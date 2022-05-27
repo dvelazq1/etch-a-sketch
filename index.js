@@ -1,12 +1,18 @@
 const container = document.getElementById("container");
+var gridDivs = [];
+var num = 16; 
+for (i=0; i <16; i++){
+    const newRow = document.createElement("div");
+    newRow.id = "newRow"
+    container.appendChild(newRow);
+    gridDivs.push(newRow);
+}
 
-function makeRows(rows, cols) {
-    container.style.setProperty('--grid-rows', rows);
-    container.style.setProperty('--grid-cols', cols);
-    for (c = 0; c < (rows * cols); c++) {
-      let cell = document.createElement("div");
-      container.appendChild(cell).className = "grid-item";
-    };
-  };
-  
-  makeRows(16, 16);
+gridDivs.forEach(newRow => {
+    for (i=0; i <num; i++){
+        const newDiv = document.createElement("div");
+        newDiv.id = "gridDiv"
+        newRow.appendChild(newDiv);
+    }
+});
+
