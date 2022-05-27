@@ -41,10 +41,6 @@ h1 {
     width: 20px;
 }
 
-#gridDiv:hover {
-    background-color: red;
-}
-
 .footer {
   font-family:'Courier New', Courier, monospace;
   font-size: 15px;

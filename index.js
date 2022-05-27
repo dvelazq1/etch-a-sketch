@@ -1,6 +1,15 @@
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
+let color = "#A0785A";
+
+function changeColor(e) {
+    e.target.style.backgroundColor = color;
+}
 const container = document.getElementById("container");
 var gridDivs = [];
-var num = 16; 
+let num = 16; 
 for (i=0; i <16; i++){
     const newRow = document.createElement("div");
     newRow.id = "newRow"
@@ -12,6 +21,8 @@ gridDivs.forEach(newRow => {
     for (i=0; i <num; i++){
         const newDiv = document.createElement("div");
         newDiv.id = "gridDiv"
+        
+        newDiv.addEventListener('mouseover', changeColor);
         newRow.appendChild(newDiv);
     }
 });
