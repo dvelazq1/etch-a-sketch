@@ -2,15 +2,11 @@
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
-
+// set up defaults
 let color = "#A0785A";
-// change each individual cell color as the mouse hovers over them
-function changeColor(e) {
-    e.target.style.backgroundColor = color;
-}
+let num = 16;
 const container = document.getElementById("container");
 var gridDivs = [];
-let num = 16;
 
 for (i=0; i <num; i++){
     const newRow = document.createElement("div");
@@ -27,4 +23,9 @@ gridDivs.forEach(newRow => {
         newRow.appendChild(newDiv);
     }
 });
+
+// change each individual cell color as the mouse hovers over them
+function changeColor(e) {
+    e.target.style.backgroundColor = color;
+}
 
