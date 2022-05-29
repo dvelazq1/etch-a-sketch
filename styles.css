@@ -5,14 +5,23 @@ body {
     background-color: #f5f5dc;
     width: fit-content;
     margin: auto;
+    gap: 20px;
 }
 
 h1 {
     font-family:'Courier New', Courier, monospace;
     color: #593C39;
     font-size: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 2px;
     text-align: center;
+}
+
+#menu {
+    font-family:'Courier New', Courier, monospace;
+    background-color: #795C34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
 #container {
@@ -22,23 +31,22 @@ h1 {
     box-shadow: 0 0 30px #C9A38D;
     margin: auto;
     flex-wrap: wrap;
-    width: 750px;
-    max-height: 528px;
-
+    width: 800px;
+    max-height: 700px;
 }
 
 #newRow {
     display: flex;
-    width: 750px;
+    width: 800px;
 }
 
 #gridDiv {
     display: flex;
+    border-width: thin;
     flex: 1;
     border-style: solid;
     border-color: #282825;
-    height: 30px;
-    width: 20px;
+    aspect-ratio: 2/1;
 }
 
 .footer {
@@ -51,4 +59,13 @@ h1 {
   background-color: #795C34;
   color: white;
   text-align: center;
+}
+a {
+    text-decoration:underline;
+}
+a:link, a:visited {
+    color: white;
+}
+a:hover {
+    color: #402e2d;
 }
