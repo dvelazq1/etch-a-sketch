@@ -21,9 +21,10 @@
         <div id="menu">
             <form id="form">
                 <label for="gridSize">Grid Size (between 1 and 100):</label>
-                <input type="text" name="gridSize" onkeydown="changeGridSize(this)">
+                <input type="text" id="gridSizeText" name="gridSize">
                 <label for="color">Color:</label>
-                <input type="color" id="color" name="color">
+                <input type="color" id="colorSelection" name="color" value="#E7C283">
+                <input type="button" id="clearGridButton" name="button" value="Clear Grid">
             </form>
         </div>
         <div id = container>
@@ -31,6 +32,6 @@
         <div class= footer>
             <p>created by <a href="https://github.com/dvelazq1" target="_blank">dvelazq1</a></p>
         </div>
-        <script src="index.js" ></script>
+        <script src="index.js" > </script>
     </body>
 </html>
