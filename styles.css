@@ -41,7 +41,7 @@ h1 {
     width: 800px;
 }
 
-#gridDiv {
+.gridDiv {
     display: flex;
     border-width: thin;
     flex: 1;

@@ -20,7 +20,7 @@ function createGrid(number){
     gridDivs.forEach(newRow => {
         for (i=0; i <num; i++){
             const newDiv = document.createElement("div");
-            newDiv.id = "gridDiv"
+            newDiv.className = "gridDiv"
             newDiv.addEventListener('mouseover', changeColor);
             newRow.appendChild(newDiv);
     }
@@ -40,15 +40,15 @@ document.getElementById("gridSizeText").addEventListener('keypress', function (e
     }
 });
 
+// change color values based on user input
 document.getElementById("colorSelection").addEventListener("input", function( event ) {
-    // highlight the mouseleave target
     color = this.value;
 });
 
 
 document.getElementById("clearGridButton").onclick = clearGrid;
 
-
+// clear the grid but keep the same dimensions
 function clearGrid() {
-    console.log("bue")
+    document.querySelectorAll('.gridDiv').forEach(div => div.style.backgroundColor = "white");
 }
